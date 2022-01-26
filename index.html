@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="apod.css">
+  <link rel="shortcut icon" href="assets/logoNasa.png" type="image/x-icon">i
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  
+  <title>Apod</title>
+</head>
+<body>
+  <div class="video">
+    <video
+      src="assets/Nebula - 25168.mp4" 
+      autoplay 
+      muted 
+      loop
+    ></video>
+  </div>
+
+  <div class="nasa">
+    <h1>Nasa Apod</h1>
+    <input type="date" id="data">
+    <p class="alert"></p>
+    <button id="buscar" onclick="buscar()">Buscar</button>
+  </div>
+  
+  <div class="container">
+    <div class="img"></div>
+    <h1 class="titulo"></h1>
+    <p class="expli"></p> <br>
+    <p class="autor"></p>
+  </div>
+  
+  <footer>
+    <h3>© Talita Beneves</h3>
+  </footer>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+  </script>
+  <script src="apod.js"></script>
+</body>
+</html>
