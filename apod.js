@@ -5,8 +5,8 @@ function buscar() {
   $.ajax({
     url: `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${data}`,
     success: function(data){
-      apiData(data)
-      $(".alert").html("")
+      apiData(data);
+      $(".alert").html("");
     },
     error: function() {
       $(".alert").html("Por favor, insira uma data de 16 de junho de 1995 até a data atual <br> (exceto 17, 18 e 19 de junho de 1995).").css({color: "yellow", fontSize: "15px", paddingTop: "10px", fontWeight: "700"});
@@ -15,14 +15,14 @@ function buscar() {
   })
 
   function apiData(busca) {
-    const img   = $(".img")
-    const title = $(".titulo")
-    const autor = $(".autor")
-    const expli = $(".expli")
+    const img   = $(".img");
+    const title = $(".titulo");
+    const autor = $(".autor");
+    const expli = $(".expli");
 
-    title.html(busca.title)
-    autor.html(`<h3>Credit:</h3> ${busca.copyright}`)
-    expli.html(`<h3>Explanation:</h3> ${busca.explanation}`) 
+    title.html(busca.title);
+    autor.html(`<h3>Credit:</h3> ${busca.copyright}`);
+    expli.html(`<h3>Explanation:</h3> ${busca.explanation}`);
 
     if (busca.media_type == 'image') {
       img.html(`<img class="img" src="${busca.url}" width: "700"/>`)
